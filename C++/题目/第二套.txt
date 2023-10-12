@@ -1,0 +1,221 @@
+2.1
+/*-------------------------------------------------------
+【程序设计】
+---------------------------------------------------------
+
+题目：
+
+输入某一个班所有学生的计算机考试成绩（int score[100]），以负数
+表示输入结束。统计学生人数并对成绩进行分析，找出其中的最低分并
+求出平均分。
+
+输出结果见图：样张.JPG
+
+要求与输出样张一样才能得到满分。
+-------------------------------------------------------*/
+#include <iostream>
+using namespace std;
+int main( )
+{
+        
+
+/**********Program**********/
+        int score[100];
+		int i,j;
+		cout<<"输入成绩且负数表示结束"<<endl;
+		for(i=0;i<100;i++)
+		{
+			cin>>score[i];
+			if(score[i]<0)
+				break;
+		}
+		cout<<"共有"<<i<<"人"<<endl;
+		cout<<"成绩如下"<<endl;
+		for(j=0;j<i;j++)
+			cout<<score[j]<<"  ";
+		cout<<endl;
+		int min=score[0];double sum=0.0;double ave;
+		for(j=0;j<i;j++)
+		{
+			if(score[j]<min)
+				min=score[j];
+			sum+=score[j];
+		}
+		ave=sum/i;
+		cout<<"最低分"<<min<<endl;
+		cout<<"平均分"<<ave<<endl;
+
+
+/**********  End  **********/
+        return 0;
+}
+
+
+2.2
+/*-------------------------------------------------------
+【程序设计】
+---------------------------------------------------------
+
+题目：从键盘输入两个字符串s1、s2，s1和s2中不包含空格字符。
+检查判断s2串是否是s1串的子串。
+如果是，返回s2在s1中的开始位置，如果s2不是s1的子串，则返回-1
+
+注意:检测时对子串中的字符不重复使用,参看样张1.jpeg
+
+输出请参看样张。
+
+-------------------------------------------------------*/
+#include <iostream>
+using namespace std;
+int main()
+{
+        char s1[100];
+        char s2[100];
+
+        /**********Program**********/
+		cin.getline(s1,100);
+		cin.getline(s2,100);
+		int a,j,b=0;
+		for(int i=0;s1[i]!='\0';i++)
+		{
+			a=i;
+			j=0;
+			for(j=0;s2[j]!='\0';j++)
+			{
+				if(s2[j]==s1[a])
+				{
+					a++;
+					continue;}
+				else
+					break;
+			}
+			if(s2[j]=='\0')
+			{
+				cout<<i<<endl;
+				i+=j;i--;b=1;}
+		}
+		if(b==0)
+			cout<<"-1"<<endl;
+    /**********  End  **********/
+    return 0; 
+}
+
+
+2.3
+/*-------------------------------------------------------
+【程序设计】
+---------------------------------------------------------
+
+题目：
+试编程求给定的一个正整数的位数
+输出结果见图：样张.JPG
+-------------------------------------------------------*/
+#include <iostream>
+using namespace std;
+int bits(int n)
+{
+/**********Program**********/
+	int i;
+	for(i=0;;i++)
+	{
+		n=n/10;
+		if(n==0)
+			break;
+	}
+	return i+1;
+
+/**********  End  **********/
+}
+void main()
+{
+        int n;
+        cout<<"n=";
+        cin>>n;
+        cout<<bits(n)<<endl;
+}
+
+2.4
+/*-------------------------------------------------------
+【程序设计】
+---------------------------------------------------------
+
+题目：
+试编程求给定的日期是那年的第几天
+
+输出结果见图：样张.JPG
+-------------------------------------------------------*/
+#include <iostream>
+using namespace std;
+
+/**********Program**********/
+  int days(int yy,int mm,int dd )
+  {
+	  int a,d;
+	  int b[12]={0 ,31,60,91,121,152,182,213,244,274,305,335};
+	  int c[12]={ 0,31,59,90,120,151,181,212,243,273,304,334};
+	  if(yy%4==0||yy%40==0||yy%400==0)
+	  {
+		  d=b[mm-1]+dd;
+	  }
+	 else
+		 d=c[mm-1]+dd;
+	 return d;
+
+  
+  }
+
+/**********  End  **********/
+void main()
+{ 
+        int yy,mm,dd;
+        cout<<"输入年 月 日：";
+        cin>>yy>>mm>>dd;
+        cout<<yy<<"年"<<mm<<"月"<<dd<<"日是"<<yy<<"年的第";
+        cout<<days(yy,mm,dd)<<"天"<<endl;
+}
+
+
+2.5
+/*-------------------------------------------------------
+【程序设计】
+---------------------------------------------------------
+
+题目：定义一个描述学生基本情况的类Student，数据成员包括学号、
+
+C++成绩、英语和数学成绩，成员函数包括获取学号、求出总成绩和平均成绩，格式：
+                
+long getID() 
+int sum ()
+double avg ()
+
+输出结果见图：样张.JPG
+-------------------------------------------------------*/
+#include <iostream>
+using namespace std;
+
+/**********Program**********/
+class Student
+{
+private:
+	long ID;int c,e,m;
+public:
+	Student(long id,int cPlusPlus,int English,int Math){ID=id;c=cPlusPlus;e=English;m=Math;}
+	long getID() {return ID;}
+	int sum (){int sum=c+e+m;return sum;}
+	double avg (){double avg=sum()/3.0;return avg;}
+};
+
+
+/**********  End  **********/
+void main(void)
+{
+        Student s(201211145, 90, 80, 97);
+        cout<<"ID："<<s.getID()<<endl;
+        cout<<"\tThe sum of source："<<s.sum()<<endl;  
+        cout<<"\tThe avg of source："<<s.avg()<<endl;
+}
+
+
+
+
+
