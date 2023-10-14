@@ -2,11 +2,11 @@
 
 Hi, here are some course for the Artificial Intelligence major at the School of Artificial Intelligence and Automation (AIA), Huazhong University of Science and Technology (HUST), provided by Zonghe Shao.
 
-I hope the repo is helpful, especially for students in AIA. 
+I hope this repo is helpful, especially for students in AIA. 
 
 Please note that you may only use the repo for learning.
 
-Students in AIAI are welcome to submit new commit to this repo at any time. 
+Students in AIA are welcome to submit new commit to this repo at any time. 
 
 For some of the e-textbooks you may use, see here:
 
