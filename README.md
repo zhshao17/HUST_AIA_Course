@@ -10,8 +10,12 @@ Students in AIA are welcome to submit new commit to this repo at any time.
 
 For some of the e-textbooks you may use, see here:
 
-link：https://pan.baidu.com/s/1rcvyj9SZA-jcDrtD0fXKbw 
+link：[baidu](https://pan.baidu.com/s/1rcvyj9SZA-jcDrtD0fXKbw) 
 code：1037
+
+Other links you can refer to：
++ [HUST-AIA-Courses-Resource](https://github.com/mfp0610/HUST-AIA-Courses-Resource)
++ [awesome-hust](https://github.com/recolic/awesome-hust)
 
 Hope every student from AIA has a happy life.
 
