@@ -1,6 +1,6 @@
 # HUST_AIA_Course
 
-Hello! Here, I share some courses offered in the major named **Artificial Intelligence** at the School of Artificial Intelligence and Automation (AIA), Huazhong University of Science and Technology (HUST).
+Hello! Here, I share courses in my major named **Artificial Intelligence** at the School of Artificial Intelligence and Automation (AIA), Huazhong University of Science and Technology (HUST).
 
 Hope this repository proves helpful, particularly for students in AIA.
 
